@@ -1,1 +1,38 @@
-<p>spa works!</p>
+    
+    <div class="page">
+    <div (click)="changeOutput('menu')" class="headliner">
+            <a >
+            <mat-icon class="back-arrow-icon">arrow_back_ios</mat-icon>
+        </a>
+        EVENTYRØYA
+    </div>
+    <div *ngIf="output$ | async as output" class="output">
+        <div class="menu" *ngIf="output === 'menu'">
+          <!-- Menu content -->
+          <div class="grid">
+            <div (click)="changeOutput('stories')" class="grid-item">
+              <img  src="assets\books-removebg-preview.png" alt="Image 1" />
+              <div class="title">HISTORIER</div>
+            </div>
+            <div (click)="changeOutput('characters')" class="grid-item">
+              <img  src="assets\characters-removebg-preview.png" alt="Image 2" />
+              <div class="title">KARAKTERER</div>
+            </div>
+            <div (click)="changeOutput('places')" class="grid-item">
+              <img  src="assets\places-removebg-preview.png" alt="Image 3" />
+              <div class="title">STEDER</div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="output === 'stories'" class="stories">
+          <!-- Stories content -->
+          <app-stories></app-stories>
+        </div>
+        <div *ngIf="output === 'characters'">
+          <!-- Characters content -->
+        </div>
+        <div *ngIf="output === 'places'">
+          <!-- Places content -->
+        </div>
+      </div>
+  </div>
