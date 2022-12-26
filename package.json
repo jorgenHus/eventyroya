@@ -1,7 +1,7 @@
 {
   "name": "eventyr-oya",
   "version": "0.1.0",
-  "homepage": "https://jorgenhus.github.io/eventyr-oya",
+  "homepage": "https://jorgenhus.github.io/eventyroya",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
